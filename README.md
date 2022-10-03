@@ -43,3 +43,9 @@ Set Temperature
 ------
 When web-thermostat sends "targetTemperature" to n8n, then n8n sends a message to the MQTT endpoint.
 ![image](https://user-images.githubusercontent.com/46699959/193657323-0926e2c6-f8d7-4469-bdb8-577937ff8051.png)
+
+homebridge-web-thermostat configuration
+------
+![image](https://user-images.githubusercontent.com/46699959/193658870-12ed7bda-3773-4be4-a015-bd85f47e138a.png)
+
+
