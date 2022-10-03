@@ -1,0 +1,69 @@
+{
+    "nodes": [
+      {
+        "parameters": {
+          "content": "## Check Thermostat Status",
+          "height": 93.07467811158799
+        },
+        "name": "Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "typeVersion": 1,
+        "position": [
+          -500,
+          -60
+        ]
+      },
+      {
+        "parameters": {
+          "path": "status",
+          "responseMode": "responseNode",
+          "options": {}
+        },
+        "name": "Web Thermostat Status Request",
+        "type": "n8n-nodes-base.webhook",
+        "typeVersion": 1,
+        "position": [
+          -160,
+          -80
+        ]
+      },
+      {
+        "parameters": {
+          "filePath": "/data/thermostat.json"
+        },
+        "name": "Read JSON on Disk",
+        "type": "n8n-nodes-base.readBinaryFile",
+        "typeVersion": 1,
+        "position": [
+          240,
+          -80
+        ]
+      },
+      {
+        "parameters": {
+          "options": {}
+        },
+        "name": "Change File to JSON",
+        "type": "n8n-nodes-base.moveBinaryData",
+        "typeVersion": 1,
+        "position": [
+          480,
+          -80
+        ]
+      },
+      {
+        "parameters": {
+          "respondWith": "json",
+          "responseBody": "={\"targetHeatingCoolingState\":{{ $json[\"targetHeatingCoolingState\"] }},\"targetTemperature\":{{ $json[\"targetTemperature\"] }},\"currentHeatingCoolingState\":{{ $json[\"currentHeatingCoolingState\"] }},\"currentTemperature\":{{ $json[\"currentTemperature\"] }}}",
+          "options": {}
+        },
+        "name": "Respond to Status Endpoint",
+        "type": "n8n-nodes-base.respondToWebhook",
+        "typeVersion": 1,
+        "position": [
+          700,
+          -80
+        ]
+      }
+    ]
+  }
