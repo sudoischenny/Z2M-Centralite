@@ -11,7 +11,7 @@ Pre-Resiquites:
 
 Why is this an issue
 ------
-z2m does not nativley support dual set point thermostats like Leviton RC-2000WH, Centralite 3157100. homebridge-deconz / homebridge-hue only supports setting heat not AC/Cooling. Centralite Pearl is a very decent thermostat if you need a thermostat with out a C-wire in the US, it's a 24v thermostat which many systems support.
+homebridge-z2m does not nativley support dual set point thermostats like Leviton RC-2000WH, Centralite 3157100. homebridge-deconz / homebridge-hue only supports setting heat not AC/Cooling. Centralite Pearl is a very decent thermostat if you need a thermostat with out a C-wire in the US, it's a 24v thermostat which many systems support.
 
 How this works
 ------
